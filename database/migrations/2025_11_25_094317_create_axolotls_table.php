@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('axolotls', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('colour');
+            $table->integer('age')->nullable;
             $table->timestamps();
         });
     }
