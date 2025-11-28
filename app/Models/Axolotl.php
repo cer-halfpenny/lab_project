@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Axolotl extends Model
 {
+    use HasFactory;
     //
 
-    public function stories()
-    {
-        return $this->hasMany(\App\Models\Story::class);
-    }
+
+    // public function stories()
+    // {
+    //     return $this->hasMany(\App\Models\Story::class);
+    // }
 
 }

@@ -17,9 +17,9 @@ class StoryFactory extends Factory
     public function definition(): array
     {
         return [
-             'title'      => $this->faker->sentence,
-        'content'    => $this->faker->paragraph,
-        'axolotl_id' => \App\Models\Axolotl::factory(), 
+            'title'      => $this->faker->sentence,
+            'content'    => $this->faker->paragraph,
+            'axolotl_id' => \App\Models\Axolotl::factory(), 
         ];
     }
 }
