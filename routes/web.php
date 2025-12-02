@@ -28,6 +28,11 @@ Route::get('/greet/{name}', function ($name) {
     return view('greet', ['name' => $name]);
 });
 
+// When a user visits /axolotls, run AxolotlController@index and call this route "axolotls.index"
 use App\Http\Controllers\AxolotlController;
 
 Route::get('/axolotls', [AxolotlController::class, 'index'])->name('axolotls.index');
+
+// Route that returns JSON results for autocomplete
+Route::get('/axolotls/search', [AxolotlController::class, 'search'])
+    ->name('axolotls.search');
