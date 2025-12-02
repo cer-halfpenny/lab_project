@@ -27,3 +27,7 @@ Route::get('/home', function () {
 Route::get('/greet/{name}', function ($name) {
     return view('greet', ['name' => $name]);
 });
+
+use App\Http\Controllers\AxolotlController;
+
+Route::get('/axolotls', [AxolotlController::class, 'index'])->name('axolotls.index');
